@@ -1,0 +1,12 @@
+
+# spring.application.name=Feign
+#spring:
+#  profiles:
+#    active: defualt
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8080
+
