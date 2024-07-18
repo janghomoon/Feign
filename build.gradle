@@ -25,6 +25,7 @@ dependencies {
     // Feign
 //    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -40,4 +41,6 @@ dependencyManagement {
 
 tasks.named('test') {
     useJUnitPlatform()
+    // OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+    jvmArgs '-Xshare:off' // JVM 아규먼트 설정
 }
